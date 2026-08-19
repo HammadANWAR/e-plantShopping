@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../redux/CartSlice";
+import { addItem } from "../redux/CartSlice";
 import plants from "../data/plants";
 
 function ProductList() {
@@ -53,7 +53,7 @@ function ProductList() {
 
                   <button
                     onClick={() =>
-                      dispatch(addToCart(plant))
+                      dispatch(addItem(plant))
                     }
                     disabled={isInCart(plant.id)}
                   >

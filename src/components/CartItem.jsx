@@ -1,12 +1,33 @@
 import { useDispatch } from "react-redux";
 import {
-  increaseQuantity,
-  decreaseQuantity,
-  removeFromCart,
+  updateQuantity,
+  removeItem,
 } from "../redux/CartSlice";
 
 function CartItem({ item }) {
   const dispatch = useDispatch();
+
+  const increaseQuantity = () => {
+    dispatch(
+      updateQuantity({
+        id: item.id,
+        quantity: item.quantity + 1,
+      })
+    );
+  };
+
+  const decreaseQuantity = () => {
+    dispatch(
+      updateQuantity({
+        id: item.id,
+        quantity: item.quantity - 1,
+      })
+    );
+  };
+
+  const deleteItem = () => {
+    dispatch(removeItem(item.id));
+  };
 
   return (
     <div className="cart-item">
@@ -24,9 +45,7 @@ function CartItem({ item }) {
 
         <div className="quantity-controls">
           <button
-            onClick={() =>
-              dispatch(decreaseQuantity(item.id))
-            }
+            onClick={decreaseQuantity}
             disabled={item.quantity === 1}
           >
             −
@@ -34,11 +53,7 @@ function CartItem({ item }) {
 
           <strong>{item.quantity}</strong>
 
-          <button
-            onClick={() =>
-              dispatch(increaseQuantity(item.id))
-            }
-          >
+          <button onClick={increaseQuantity}>
             +
           </button>
         </div>
@@ -50,9 +65,7 @@ function CartItem({ item }) {
 
         <button
           className="delete-button"
-          onClick={() =>
-            dispatch(removeFromCart(item.id))
-          }
+          onClick={deleteItem}
         >
           Delete
         </button>
