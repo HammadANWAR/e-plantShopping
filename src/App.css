@@ -4,268 +4,161 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7f2;
-  color: #243524;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Navbar */
-
-.navbar {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 6%;
-  background: #1f4d35;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  color: white;
-  text-decoration: none;
-  font-size: 23px;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.cart-link {
-  background: #6b9f65;
-  padding: 9px 14px;
-  border-radius: 20px;
-}
-
-/* Landing page */
-
-.landing-page {
-  min-height: calc(100vh - 70px);
-  background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e");
+/* Required by the assignment */
+.background-image {
+  background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+}
+
+/* Paradise Nursery landing page */
+.landing-page {
+  min-height: calc(100vh - 70px);
 }
 
 .landing-overlay {
-  width: 100%;
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .landing-content {
-  max-width: 650px;
-  padding: 55px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: white;
+  max-width: 700px;
+  padding: 40px 20px;
 }
 
 .welcome-text {
-  letter-spacing: 4px;
+  font-size: 18px;
   font-weight: bold;
-  color: #5b8c51;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 .landing-content h1 {
   font-size: 56px;
-  margin: 10px 0;
-  color: #1f4d35;
+  margin: 10px 0 20px;
 }
 
 .landing-description {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
 .get-started {
   display: inline-block;
-  padding: 14px 30px;
-  background: #2f6b45;
+  padding: 14px 28px;
+  background-color: #2e7d32;
   color: white;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .get-started:hover {
-  background: #1f4d35;
+  background-color: #1b5e20;
 }
 
-/* Product page */
-
+/* Product listing */
 .product-list {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 45px 25px;
+  padding: 40px;
 }
 
 .product-list > h1 {
   text-align: center;
-  font-size: 42px;
-  color: #1f4d35;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .product-list section {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .product-list section h2 {
-  font-size: 30px;
-  color: #2f6b45;
-  border-bottom: 2px solid #d7e3d1;
-  padding-bottom: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  color: #2e7d32;
 }
 
 .plant-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
 .plant-card {
   background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding-bottom: 20px;
-  transition: transform 0.2s ease;
-}
-
-.plant-card:hover {
-  transform: translateY(-5px);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .plant-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .plant-card h3 {
-  margin: 18px 18px 8px;
-  font-size: 20px;
+  margin: 15px 0 8px;
 }
 
 .plant-card p {
-  margin: 0 18px 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #2f6b45;
 }
 
 .plant-card button {
-  margin-left: 18px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 8px;
-  background: #2f6b45;
+  border-radius: 6px;
+  background-color: #2e7d32;
   color: white;
   cursor: pointer;
 }
 
-.plant-card button:hover:not(:disabled) {
-  background: #1f4d35;
-}
-
 .plant-card button:disabled {
-  background: #9aaa9b;
+  background-color: #999;
   cursor: not-allowed;
 }
 
-/* About page */
-
-.about-page {
-  min-height: calc(100vh - 70px);
-  padding: 70px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-content {
-  max-width: 800px;
-  background: white;
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.about-content h1 {
-  color: #1f4d35;
-  font-size: 40px;
-}
-
-.about-content h2 {
-  color: #2f6b45;
-  margin-top: 35px;
-}
-
-.about-content p {
-  line-height: 1.8;
-  font-size: 17px;
-}
-
-.about-content li {
-  margin: 12px 0;
-}
-
 /* Cart */
-
 .cart-page {
-  max-width: 1100px;
+  padding: 40px;
+  max-width: 1000px;
   margin: auto;
-  padding: 45px 20px;
 }
 
 .cart-title {
   text-align: center;
-  color: #1f4d35;
-  font-size: 40px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .cart-item {
   display: flex;
-  align-items: center;
   gap: 25px;
   background: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cart-item img {
-  width: 130px;
-  height: 130px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .cart-item-info {
@@ -275,7 +168,7 @@ body {
 .quantity-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   margin: 15px 0;
 }
 
@@ -283,23 +176,21 @@ body {
   width: 35px;
   height: 35px;
   border: none;
-  border-radius: 50%;
-  background: #2f6b45;
-  color: white;
-  font-size: 20px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .quantity-controls button:disabled {
-  background: #aaa;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .delete-button {
   padding: 8px 15px;
   border: none;
-  border-radius: 7px;
-  background: #b94a48;
+  border-radius: 5px;
+  background-color: #c62828;
   color: white;
   cursor: pointer;
 }
@@ -307,53 +198,45 @@ body {
 .cart-summary {
   background: white;
   padding: 25px;
-  border-radius: 15px;
-  text-align: right;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.cart-summary h2 {
-  color: #1f4d35;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .checkout-button,
 .continue-button {
-  padding: 12px 20px;
+  padding: 12px 22px;
+  margin: 8px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-left: 10px;
+  font-weight: bold;
 }
 
 .checkout-button {
-  background: #2f6b45;
+  background-color: #2e7d32;
   color: white;
 }
 
 .continue-button {
-  background: #dce8d8;
-  color: #1f4d35;
+  background-color: #555;
+  color: white;
 }
 
-/* Mobile */
+/* About Us */
+.about-us-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  line-height: 1.7;
+}
 
-@media (max-width: 700px) {
-  .navbar {
-    height: auto;
-    padding: 15px;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .landing-content {
-    margin: 20px;
-    padding: 35px 20px;
+/* Responsive design */
+@media (max-width: 768px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
   }
 
   .landing-content h1 {
@@ -362,6 +245,10 @@ body {
 
   .cart-item {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: 250px;
   }
 }

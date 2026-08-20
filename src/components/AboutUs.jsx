@@ -11,19 +11,19 @@ function AboutUs() {
       <p>
         We believe that plants can make every home more
         beautiful, peaceful, and refreshing. Our nursery
-        provides a variety of indoor, succulent, and tropical
+        offers a variety of indoor, succulent, and tropical
         plants for plant lovers of all experience levels.
       </p>
 
       <p>
-        Our goal is to make it easy for customers to discover
-        and purchase plants that bring nature into their homes.
+        Our mission is to make it easy for everyone to bring
+        nature into their homes by providing quality plants
+        and a simple shopping experience.
       </p>
 
       <p>
-        At Paradise Nursery, we are committed to providing
-        quality plants and a simple, enjoyable shopping
-        experience.
+        Thank you for choosing Paradise Nursery. We are happy
+        to help you find the perfect plant for your space.
       </p>
     </div>
   );

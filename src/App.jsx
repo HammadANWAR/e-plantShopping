@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -13,25 +14,38 @@ import Cart from "./pages/Cart";
 import "./App.css";
 
 function Home() {
+  const [showProducts, setShowProducts] = useState(false);
+
+  const handleGetStarted = () => {
+    setShowProducts(true);
+  };
+
   return (
-    <main className="landing-page">
-      <div className="landing-overlay">
-        <div className="landing-content">
-          <p className="welcome-text">WELCOME TO</p>
+    <>
+      {!showProducts ? (
+        <main className="landing-page background-image">
+          <div className="landing-overlay">
+            <div className="landing-content">
+              <h1>Welcome to Paradise Nursery</h1>
 
-          <h1>Paradise Nursery</h1>
+              <p className="landing-description">
+                Discover beautiful houseplants and bring a
+                little piece of nature into your home.
+              </p>
 
-          <p className="landing-description">
-            Discover beautiful houseplants and bring a little
-            piece of nature into your home.
-          </p>
-
-          <Link to="/plants" className="get-started">
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </main>
+              <button
+                className="get-started"
+                onClick={handleGetStarted}
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </main>
+      ) : (
+        <ProductList />
+      )}
+    </>
   );
 }
 
